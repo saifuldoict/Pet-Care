@@ -43,7 +43,7 @@ const HeroSlider = () => {
   }, []);
 
   return (
-    <div className="relative w-full rounded-2xl shadow-xl overflow-hidden bg-base-200">
+    <div className="relative w-full h-[500px] rounded-2xl shadow-xl overflow-hidden bg-base-200">
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -52,7 +52,7 @@ const HeroSlider = () => {
           }`}
         >
           {/* Left: Image */}
-          <div className="w-full md:w-1/2 h-[70vh]">
+          <div className="w-full md:w-1/2 ">
             <img
               src={slide.image}
               alt={slide.title}
@@ -61,7 +61,7 @@ const HeroSlider = () => {
           </div>
 
           {/* Right: Text */}
-          <div className="w-full md:w-1/2 p-10 flex flex-col justify-center bg-gradient-to-br from-[#fefefe] to-[#f7f3f3] text-gray-800 h-[70vh]">
+          <div className="w-full md:w-1/2 p-10 flex flex-col justify-center bg-gradient-to-br from-[#fefefe] to-[#f7f3f3] text-gray-800 ">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 text-[#403f3f]">
               {slide.title}
             </h1>

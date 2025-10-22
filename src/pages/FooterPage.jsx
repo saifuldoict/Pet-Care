@@ -10,9 +10,9 @@ import {
 
 const FooterPage = () => {
   return (
-    <footer className="bg-base-300 text-base-content mt-10">
+    <footer className="bg-base-300 text-base-content mt-10 ">
    
-      <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-70 ">
         
       
         <div>
