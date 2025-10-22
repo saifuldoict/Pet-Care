@@ -2,7 +2,7 @@ import React from 'react'
 
 const WinterCareServices = ({service}) => {
      const {image,serviceName,rating,price} = service;
-    console.log(service)
+    
   return (
     <div className="max-w-sm bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
       <img src={image} alt={serviceName} className="w-full h-48 object-cover" />
