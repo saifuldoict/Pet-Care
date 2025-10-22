@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useLoaderData } from "react-router";
-import toast, { Toaster } from "react-hot-toast";
+import  { toast, Toaster } from "react-hot-toast";
+import { useSpring, animated } from "@react-spring/web";
 
 const ServicesPage = () => {
   const allService = useLoaderData();
@@ -17,7 +18,11 @@ const ServicesPage = () => {
     toast.success("Service booked successfully!");
     setFormData({ name: "", email: "" });
   };
-
+const animation = useSpring({
+    from: { opacity: 0, transform: "translateY(30px)" },
+    to: { opacity: 1, transform: "translateY(0px)" },
+    config: { tension: 200, friction: 20 },
+  });
 
   const renderStars = (rating) => {
     const fullStars = Math.floor(rating);
@@ -63,36 +68,39 @@ const ServicesPage = () => {
         ))}
       </div>
 
-
-      <div className="max-w-md mx-auto p-4 border rounded-lg shadow-md">
-        <h2 className="text-2xl font-semibold mb-4 text-center">Book a Service</h2>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            className="border p-2 rounded"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            className="border p-2 rounded"
-          />
-          <button
-            type="submit"
-            className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-          >
-            Book Now
-          </button>
-        </form>
-      </div>
+<animated.div
+      style={animation}
+      className="max-w-md mx-auto p-4 border rounded-lg shadow-md bg-white mt-10"
+    >
+      <h2 className="text-2xl font-semibold mb-4 text-center">Book a Service</h2>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+          className="border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          className="border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+        <button
+          type="submit"
+          className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition"
+        >
+          Book Now
+        </button>
+      </form>
+    </animated.div>
+      
     </div>
   );
 };

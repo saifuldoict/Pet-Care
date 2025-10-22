@@ -4,6 +4,7 @@ import WinterCareServices from "../components/WinterCareServices";
 import WinterCareTips from "../components/WinterCareTips";
 import ExpertVets from "../components/ExpertVets";
 import { useLoaderData } from "react-router";
+import TestimonialsSection from "../components/TestimonialsSection";
 
 const HomePage = () => {
   const services = useLoaderData(); // winter services
@@ -23,6 +24,7 @@ const HomePage = () => {
               <WinterCareServices key={service.serviceId} service={service} />
             ))}
           </div>
+          
         </div>
 
         {/* Right side: Tips + Expert Vets */}
@@ -31,6 +33,7 @@ const HomePage = () => {
           <ExpertVets /> 
         </div>
       </div>
+      <TestimonialsSection/>
     </div>
   );
 };

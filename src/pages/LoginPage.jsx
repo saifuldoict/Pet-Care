@@ -12,6 +12,8 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Redirect to home page after login
+  const from = location.state?.from?.pathname || "/";
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -42,23 +44,24 @@ const LoginPage = () => {
   };
 
   const handleForgetPassword = async () => {
-   
-  const emailInput = document.querySelector('input[name="email"]')?.value;
-  const email = prompt("Enter your email for password reset:", emailInput || "");
-  if (!email) return;
+    const emailInput = document.querySelector('input[name="email"]')?.value;
+    const email = prompt("Enter your email for password reset:", emailInput || "");
+    if (!email) return;
 
-  try {
-    await resetPassword(email);
-    toast.success("Password reset email sent!");
-  } catch (err) {
-    toast.error(err.message);
-  }
+    try {
+      await resetPassword(email);
+      toast.success("Password reset email sent!");
+    } catch (err) {
+      toast.error(err.message);
+    }
   };
 
   return (
     <div className="flex justify-center min-h-screen items-center bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500">
       <div className="w-full max-w-md backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-8">
-        <h2 className="text-2xl font-semibold mb-5 text-center text-white">Login to Your Account</h2>
+        <h2 className="text-2xl font-semibold mb-5 text-center text-white">
+          Login to Your Account
+        </h2>
 
         <form onSubmit={handleLogin} className="space-y-5 text-white">
           {error && <p className="text-red-400 text-sm">{error}</p>} 
@@ -137,3 +140,4 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+

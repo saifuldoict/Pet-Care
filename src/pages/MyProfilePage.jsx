@@ -71,6 +71,7 @@ const MyProfilePage = () => {
         >
           {updating ? "Updating..." : "Update Profile"}
         </button>
+    
       </div>
     </div>
   );
