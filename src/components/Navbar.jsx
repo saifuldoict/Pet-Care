@@ -18,7 +18,7 @@ const Navbar = () => {
     setTimeout(() => {
       navigate(path);
       setLoading(false);
-    }, 200); // quick navigation
+    }, 200); 
   };
 
   const handleLogout = async () => {
@@ -35,7 +35,7 @@ const Navbar = () => {
       <nav className="bg-white shadow-md text-gray-800 relative z-50">
         <div className="max-w-[1200px] mx-auto px-4">
           <div className="flex justify-between items-center h-16">
-            {/* Logo */}
+         
             <div >
               <Link to={'/'} className="flex items-center gap-2">
                    <img src={paw} alt="Logo" className="h-8 w-8" />
@@ -45,7 +45,7 @@ const Navbar = () => {
               </Link>
             </div>
 
-            {/* Desktop Menu */}
+        
             <div className="hidden md:flex items-center gap-6">
               <ul className="flex items-center gap-6">
                 <button onClick={() => handleNavigation("/")} className="link link-hover">
@@ -61,7 +61,7 @@ const Navbar = () => {
                 )}
               </ul>
 
-              {/* User / Auth Buttons */}
+         
               <div className="flex items-center gap-4">
                 {user ? (
                   <div className="relative group flex items-center gap-2">
@@ -70,7 +70,7 @@ const Navbar = () => {
                       alt={user.displayName || "User"}
                       className="h-10 w-10 rounded-full border border-gray-300 cursor-pointer"
                     />
-                    {/* Hover tooltip */}
+              
                     <div className="absolute bottom-[-1.5rem] left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                       {user.displayName || "User"}
                     </div>
@@ -94,7 +94,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Mobile Menu Button */}
+
             <div className="md:hidden">
               <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700 focus:outline-none">
                 {isOpen ? <ImCross /> : <FiMenu />}
@@ -103,7 +103,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+
         {isOpen && (
           <div className="md:hidden bg-white shadow-md p-4 flex flex-col gap-4">
             <button onClick={() => handleNavigation("/")} className="link link-hover">
@@ -118,7 +118,7 @@ const Navbar = () => {
               </button>
             )}
 
-            {/* Auth / User */}
+    
             {user ? (
               <div className="flex items-center gap-2">
                 <img
@@ -145,7 +145,7 @@ const Navbar = () => {
         )}
       </nav>
 
-      {/* Loading Spinner */}
+
       {loading && (
         <div className="fixed inset-0 flex items-center justify-center bg-white/70 backdrop-blur-sm z-50">
           <div className="w-12 h-12 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>

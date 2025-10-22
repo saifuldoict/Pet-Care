@@ -34,7 +34,7 @@ const slides = [
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Auto-slide every 5 seconds
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -51,7 +51,7 @@ const HeroSlider = () => {
             index === currentSlide ? "opacity-100 visible" : "opacity-0 hidden"
           }`}
         >
-          {/* Left: Image */}
+         
           <div className="w-full md:w-1/2 ">
             <img
               src={slide.image}
@@ -60,7 +60,7 @@ const HeroSlider = () => {
             />
           </div>
 
-          {/* Right: Text */}
+
           <div className="w-full md:w-1/2 p-10 flex flex-col justify-center bg-gradient-to-br from-[#fefefe] to-[#f7f3f3] text-gray-800 ">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 text-[#403f3f]">
               {slide.title}
@@ -75,7 +75,7 @@ const HeroSlider = () => {
         </div>
       ))}
 
-      {/* Manual Controls */}
+
       <div className="absolute flex justify-between transform -translate-y-1/2 left-3 right-3 top-1/2">
         <button
           onClick={() =>
@@ -95,7 +95,7 @@ const HeroSlider = () => {
         </button>
       </div>
 
-      {/* Dots Indicator */}
+
       <div className="absolute bottom-5 flex justify-center w-full gap-3">
         {slides.map((_, i) => (
           <button

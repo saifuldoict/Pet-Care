@@ -7,12 +7,11 @@ import { toast } from "react-toastify";
 
 const LoginPage = () => {
   const [show, setShow] = useState(false);
-  const [error, setError] = useState(""); // inline error
+  const [error, setError] = useState(""); 
   const { loginUser, loginWithGoogle, resetPassword } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
 
-  const from = location.state?.from?.pathname || "/"; // redirect after login
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -25,7 +24,7 @@ const LoginPage = () => {
       toast.success("Login Successful!");
       navigate(from, { replace: true });
     } catch (err) {
-      setError(err.message); // show error in form
+      setError(err.message); 
       toast.error(err.message);
     }
   };
@@ -43,7 +42,7 @@ const LoginPage = () => {
   };
 
   const handleForgetPassword = async () => {
-   // Pre-fill email from input field if available
+   
   const emailInput = document.querySelector('input[name="email"]')?.value;
   const email = prompt("Enter your email for password reset:", emailInput || "");
   if (!email) return;
@@ -62,7 +61,7 @@ const LoginPage = () => {
         <h2 className="text-2xl font-semibold mb-5 text-center text-white">Login to Your Account</h2>
 
         <form onSubmit={handleLogin} className="space-y-5 text-white">
-          {error && <p className="text-red-400 text-sm">{error}</p>} {/* inline error */}
+          {error && <p className="text-red-400 text-sm">{error}</p>} 
 
           <div>
             <label className="block text-sm mb-1">Email</label>

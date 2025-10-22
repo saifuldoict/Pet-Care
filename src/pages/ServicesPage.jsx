@@ -5,7 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 const ServicesPage = () => {
   const allService = useLoaderData();
 
-  // Form state
+
   const [formData, setFormData] = useState({ name: "", email: "" });
 
   const handleChange = (e) => {
@@ -18,7 +18,7 @@ const ServicesPage = () => {
     setFormData({ name: "", email: "" });
   };
 
-  // Helper to render stars
+
   const renderStars = (rating) => {
     const fullStars = Math.floor(rating);
     const halfStar = rating % 1 >= 0.5;
@@ -43,7 +43,6 @@ const ServicesPage = () => {
       <Toaster position="top-right" />
       <h1 className="text-3xl font-bold mb-6 text-center">Our Services</h1>
 
-      {/* Services Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-8">
         {allService?.map((service) => (
           <div
@@ -64,7 +63,7 @@ const ServicesPage = () => {
         ))}
       </div>
 
-      {/* Book Service Form */}
+
       <div className="max-w-md mx-auto p-4 border rounded-lg shadow-md">
         <h2 className="text-2xl font-semibold mb-4 text-center">Book a Service</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
