@@ -1,0 +1,102 @@
+import React from "react";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+
+const FooterPage = () => {
+  return (
+    <footer className="bg-base-300 text-base-content mt-10">
+   
+      <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+      
+        <div>
+          <h2 className="text-lg font-semibold mb-4" style={{ color: "#7cbc5e" }}>
+            Contact Us
+          </h2>
+          <p className="flex items-center gap-2 mb-2">
+            <FaPhoneAlt className="text-[#7cbc5e]" /> +880 1234-567890
+          </p>
+          <p className="flex items-center gap-2 mb-2">
+            <FaEnvelope className="text-[#7cbc5e]" /> info@petcare.com
+          </p>
+          <p className="flex items-center gap-2">
+            <FaMapMarkerAlt className="text-[#7cbc5e]" /> Dhaka, Bangladesh
+          </p>
+        </div>
+
+        
+        <div>
+          <h2 className="text-lg font-semibold mb-4" style={{ color: "#7cbc5e" }}>
+            Follow Us
+          </h2>
+          <div className="flex gap-5 text-2xl">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:scale-110 transition"
+            >
+              <FaFacebookF className="text-[#1877F2]" /> 
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:scale-110 transition"
+            >
+              <FaTwitter className="text-[#1DA1F2]" /> 
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:scale-110 transition"
+            >
+              <FaInstagram className="text-[#E4405F]" /> 
+            </a>
+          </div>
+        </div>
+
+     
+        <div>
+          <h2 className="text-lg font-semibold mb-4" style={{ color: "#7cbc5e" }}>
+            Policies
+          </h2>
+          <ul className="space-y-2">
+            <li>
+              <a href="/privacy" className="hover:text-[#7cbc5e] transition">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="/terms" className="hover:text-[#7cbc5e] transition">
+                Terms & Conditions
+              </a>
+            </li>
+            <li>
+              <a href="/faq" className="hover:text-[#7cbc5e] transition">
+                FAQ
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-base-300 py-4 text-center text-sm">
+        <p>
+          © {new Date().getFullYear()}{" "}
+          <span style={{ color: "#7cbc5e", fontWeight: "600" }}>PetCare</span>.
+          All rights reserved.
+        </p>
+      </div>
+    </footer>
+  );
+};
+
+export default FooterPage;
