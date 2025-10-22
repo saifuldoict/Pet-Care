@@ -30,13 +30,13 @@ const WinterCareTips = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className="max-w-6xl mx-auto px-4 py-8 ">
       <h2 className="text-3xl font-bold text-center mb-6">Winter Care Tips for Pets</h2>
       <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-6">
         {tips.map((tip) => (
           <div
             key={tip.id}
-            className="card bg-base-100 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
+            className="card bg-base-100 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 "
           >
             <div className="card-body">
               <h3 className="card-title text-xl font-semibold">{tip.title}</h3>

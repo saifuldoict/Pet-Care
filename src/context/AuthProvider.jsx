@@ -8,6 +8,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   onAuthStateChanged,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
 
@@ -52,11 +53,18 @@ const AuthProvider = ({ children }) => {
   // 🔹 Logout
   const logOut = async () => await signOut(auth);
 
-
+  // 🔹 Update Profile
   const updateUserProfile = async (profile) => {
     if (!auth.currentUser) throw new Error("No user is logged in");
-    await firebaseUpdateProfile(auth.currentUser, profile);
+    await updateProfile(auth.currentUser, profile);
     setUser({ ...auth.currentUser }); // Update context state
+  };
+
+  // 🔹 Forget Password
+  const resetPassword = async (email) => {
+    if (!email) throw new Error("Please provide an email");
+    await sendPasswordResetEmail(auth, email);
+    return true;
   };
 
   return (
@@ -68,7 +76,8 @@ const AuthProvider = ({ children }) => {
         loginUser,
         loginWithGoogle,
         logOut,
-        updateUserProfile
+        updateUserProfile,
+        resetPassword, // ✅ Added
       }}
     >
       {children}

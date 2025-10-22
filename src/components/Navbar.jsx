@@ -36,11 +36,13 @@ const Navbar = () => {
         <div className="max-w-[1200px] mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex items-center gap-2">
-              <img src={paw} alt="Logo" className="h-8 w-8" />
+            <div >
+              <Link to={'/'} className="flex items-center gap-2">
+                   <img src={paw} alt="Logo" className="h-8 w-8" />
               <button onClick={() => handleNavigation("/")} className="font-bold text-lg">
                 Pet Care
               </button>
+              </Link>
             </div>
 
             {/* Desktop Menu */}
@@ -53,7 +55,7 @@ const Navbar = () => {
                   Services
                 </button>
                 {user && (
-                  <button onClick={() => handleNavigation("/my-profile")} className="link link-hover">
+                  <button onClick={() => handleNavigation("/my-profile")} className="link link-hover ml-5">
                     My Profile
                   </button>
                 )}

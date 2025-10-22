@@ -26,7 +26,7 @@ const HomePage = () => {
         </div>
 
         {/* Right side: Tips + Expert Vets */}
-        <div className="lg:col-span-3 flex flex-col gap-6">
+        <div className="lg:col-span-3 flex flex-col gap-6 bg-green-200 rounded-lg">
           <WinterCareTips />
           <ExpertVets /> 
         </div>
