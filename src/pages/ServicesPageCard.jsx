@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useLoaderData } from "react-router";
+ import { Link } from "react-router";
 import  { toast, Toaster } from "react-hot-toast";
-import { useSpring, animated } from "@react-spring/web";
+ import { useSpring, animated } from "@react-spring/web";
 
-const ServicesPage = () => {
-  const allService = useLoaderData();
-
+const ServicesPageCard = ({service}) => {
+  // const allService = useLoaderData();
+  console.log(service)
 
   const [formData, setFormData] = useState({ name: "", email: "" });
 
@@ -48,24 +48,16 @@ const animation = useSpring({
       <Toaster position="top-right" />
       <h1 className="text-3xl font-bold mb-6 text-center">Our Services</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-8">
-        {allService?.map((service) => (
-          <div
-            key={service.serviceId}
-            className="rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
-          >
-            <img
-              src={service.image}
-              alt={service.serviceName}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4 bg-white">
-              <h2 className="text-xl font-semibold mb-2">{service.serviceName}</h2>
-              <p className="text-gray-500 mb-2">{service.description}</p>
-              <div className="mb-2">{renderStars(service.rating)}</div>
-            </div>
-          </div>
-        ))}
+    
+      <div className="space-y-5 shadow-2xl p-4 border border-gray-50">
+        <img src={service.image} alt="image"className="w-[40] h-[20] object-cover mx-auto"/>
+        <div className="text-center">
+          <h2 className="text-xl font-semibold mb-2">{service.serviceName}</h2>
+          <p className="text-gray-500 mb-2">{service.description}</p>
+          <div className="mb-2 flex justify-around"><p className="font-bold">Rating: {service.rating}</p> 
+            <p className="text-red-600 font-bold">Price: {service.price}</p></div>
+        </div>
+        <Link to='/' className="btn btn-primary w-full p-6 text-xl">Home</Link>
       </div>
 
 <animated.div
@@ -105,4 +97,4 @@ const animation = useSpring({
   );
 };
 
-export default ServicesPage;
+export default ServicesPageCard;
