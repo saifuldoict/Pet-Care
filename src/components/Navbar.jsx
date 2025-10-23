@@ -109,7 +109,7 @@ const Navbar = () => {
             <button onClick={() => handleNavigation("/")} className="link link-hover">
               Home
             </button>
-            <button onClick={() => handleNavigation("/services")} className="link link-hover">
+            <button onClick={() => handleNavigation("/service")} className="link link-hover">
               Services
             </button>
             {user && (
