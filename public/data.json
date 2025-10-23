@@ -1,6 +1,6 @@
 [
   {
-    "serviceId": 1,
+    "id": 1,
     "serviceName": "Winter Coat Fitting for Cats & Dogs",
     "providerName": "PawCare Studio",
     "providerEmail": "info@pawcare.com",
@@ -12,7 +12,7 @@
     "category": "Clothing"
   },
   {
-    "serviceId": 2,
+    "id": 2,
     "serviceName": "Winter Grooming & Paw Treatment",
     "providerName": "CozyPets Grooming",
     "providerEmail": "hello@cozypets.com",
@@ -24,7 +24,7 @@
     "category": "Grooming"
   },
   {
-    "serviceId": 3,
+    "id": 3,
     "serviceName": "Heated Bed & Blanket Setup",
     "providerName": "WarmPaws Comfort",
     "providerEmail": "contact@warmpaws.com",
@@ -36,7 +36,7 @@
     "category": "Comfort"
   },
   {
-    "serviceId": 4,
+    "id": 4,
     "serviceName": "Nutritional Winter Diet Plan",
     "providerName": "HealthyTails Nutrition",
     "providerEmail": "care@healthytails.com",
@@ -48,7 +48,7 @@
     "category": "Nutrition"
   },
   {
-    "serviceId": 5,
+    "id": 5,
     "serviceName": "Fur Hydration & Anti-Dryness Spa",
     "providerName": "SnowPet Spa",
     "providerEmail": "spa@snowpet.com",
@@ -60,7 +60,7 @@
     "category": "Spa"
   },
   {
-    "serviceId": 6,
+    "id": 6,
     "serviceName": "Indoor Winter Exercise Session",
     "providerName": "ActivePaws Training",
     "providerEmail": "train@activepaws.com",

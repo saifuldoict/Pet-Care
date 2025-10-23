@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router';
 
 const WinterCareServices = ({service}) => {
-     const {image,serviceName,rating,price} = service;
+     const {image,serviceName,rating,price,serviceId} = service;
     
   return (
     <div className="max-w-sm bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
@@ -30,9 +31,9 @@ const WinterCareServices = ({service}) => {
         <p className="text-gray-800 font-medium mb-4">${price}</p>
 
         {/* View Details Button */}
-        <button className="bg-primary text-white px-4 py-2 rounded hover:bg-primary-focus transition">
+        <Link to={`/services-details/${serviceId}`} className="bg-primary text-white px-4 py-2 rounded hover:bg-primary-focus transition">
           View Details
-        </button>
+        </Link>
       </div>
     </div>
   )
