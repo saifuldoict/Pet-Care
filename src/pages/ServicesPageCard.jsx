@@ -50,13 +50,15 @@ const animation = useSpring({
 
     
       <div className="space-y-5 shadow-2xl p-4 border border-gray-50 rounded-xl hover:shadow-3xl transition-all duration-300">
-  <div className="w-100 h-auto md:h-64 overflow-hidden rounded-lg mx-auto">
-    <img
-      src={service.image}
-      alt={service.serviceName}
-      className="w-full h-full object-cover object-center"
-    />
-  </div>
+  
+  <div className="w-full h-52 sm:h-60 md:h-64 overflow-hidden rounded-lg mx-auto">
+  <img
+    src={service.image}
+    alt={service.serviceName}
+    className="w-full h-full object-cover object-center"
+  />
+</div>
+
 
   <div className="text-center">
     <h2 className="text-xl font-semibold mb-2">{service.serviceName}</h2>
