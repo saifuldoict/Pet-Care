@@ -49,16 +49,40 @@ const animation = useSpring({
       <h1 className="text-3xl font-bold mb-6 text-center">Our Services</h1>
 
     
-      <div className="space-y-5 shadow-2xl p-4 border border-gray-50">
-        <img src={service.image} alt="image"className="w-[40] h-[20] object-cover mx-auto"/>
-        <div className="text-center">
-          <h2 className="text-xl font-semibold mb-2">{service.serviceName}</h2>
-          <p className="text-gray-500 mb-2">{service.description}</p>
-          <div className="mb-2 flex justify-around"><p className="font-bold">Rating: {service.rating}</p> 
-            <p className="text-red-600 font-bold">Price: {service.price}</p></div>
-        </div>
-        <Link to='/' className="btn btn-primary w-full p-6 text-xl">Home</Link>
-      </div>
+      <div className="space-y-5 shadow-2xl p-4 border border-gray-50 rounded-xl hover:shadow-3xl transition-all duration-300">
+  <div className="w-100 h-auto md:h-64 overflow-hidden rounded-lg mx-auto">
+    <img
+      src={service.image}
+      alt={service.serviceName}
+      className="w-full h-full object-cover object-center"
+    />
+  </div>
+
+  <div className="text-center">
+    <h2 className="text-xl font-semibold mb-2">{service.serviceName}</h2>
+    <p className="text-gray-500 mb-3 text-sm md:text-base">
+      {service.description}
+    </p>
+
+    <div className="flex justify-around items-center mb-3 text-sm md:text-base">
+      <p className="font-bold text-gray-700">
+        ⭐ Rating: <span className="text-yellow-600">{service.rating}</span>
+      </p>
+      <p className="text-red-600 font-bold">
+        💰 Price: {service.price}
+      </p>
+    </div>
+  </div>
+
+  <Link
+    to="/"
+    className="btn btn-primary w-full py-3 text-lg font-semibold rounded-lg"
+  >
+    Home
+  </Link>
+</div>
+
+
 
 <animated.div
       style={animation}
