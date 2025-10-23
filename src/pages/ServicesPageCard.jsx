@@ -62,7 +62,7 @@ const animation = useSpring({
 
 <animated.div
       style={animation}
-      className="max-w-md mx-auto p-4 border rounded-lg shadow-md bg-white mt-10"
+      className="w-full mx-auto p-4 border rounded-lg shadow-md bg-white mt-10"
     >
       <h2 className="text-2xl font-semibold mb-4 text-center">Book a Service</h2>
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">

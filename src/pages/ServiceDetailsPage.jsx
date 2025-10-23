@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useLoaderData, useParams } from 'react-router'
-import RigntAside from './RigntAside';
 import ServicesPageCard from './ServicesPageCard';
 
 const ServiceDetailsPage = () => {
@@ -17,12 +16,10 @@ useEffect(()=>{
   return (
     <div>
         <main className='w-11/12 mx-auto grid grid-cols-12 gap-5 py-10'>
-                <section className='col-span-9'>
+                <section className='col-span-12'>
                         <ServicesPageCard service={service}/>
                 </section>
-                <aside className='col-span-3'>
-                    <RigntAside/>
-                </aside>
+                
         </main>
     </div>
   )

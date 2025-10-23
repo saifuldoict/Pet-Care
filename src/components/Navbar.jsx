@@ -4,6 +4,7 @@ import { ImCross } from "react-icons/im";
 import { FiMenu } from "react-icons/fi";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthProvider";
+import ServiceDetailsPage from "../pages/ServiceDetailsPage";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,11 +52,11 @@ const Navbar = () => {
                 <button onClick={() => handleNavigation("/")} className="link link-hover">
                   Home
                 </button>
-                <button onClick={() => handleNavigation("/services")} className="link link-hover">
+                <Link useNavigate={<ServiceDetailsPage/>}  className="link link-hover">
                   Services
-                </button>
+                </Link>
                 {user && (
-                  <button onClick={() => handleNavigation("/my-profile")} className="link link-hover ml-5">
+                  <button  className="link link-hover ml-5">
                     My Profile
                   </button>
                 )}
