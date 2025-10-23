@@ -1,16 +1,76 @@
-# React + Vite
+# 🐾 Pet Care
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Pet Care** is a modern and responsive web application built to provide pet owners with essential care services, expert advice, and access to trusted veterinarians. The platform offers an intuitive interface, dynamic animations, and Firebase authentication for a seamless user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo  
+👉 **[Visit Pet Care Website](https://pet-care-6cf1c.web.app/services)**
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎯 Purpose  
+The **Pet Care** website aims to help pet owners access professional care services, read helpful tips, and connect with expert veterinarians easily — all in one place.  
+It’s designed with user experience, responsiveness, and performance in mind.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Key Features  
+
+- 🐶 **User Authentication** using Firebase (Sign Up, Login, Google Login)  
+- 💬 **Service Listings** with detailed cards (image, price, rating, etc.)  
+- 🌟 **Testimonials Section** featuring client feedback  
+- 👩‍⚕️ **Expert Vet Profiles** with photos and designations  
+- ❄️ **Winter Care Tips** for pet well-being  
+- 🔒 **Private Routes** for authenticated users only  
+- ⚙️ **Dynamic Animations** using React Spring and Animate.css  
+- 📱 **Responsive Design** powered by Tailwind CSS  
+- 🔔 **Toast Notifications** for feedback and alerts  
+- 🌍 **Environment Variables** managed via dotenv  
+
+---
+
+## 🛠️ Technologies Used  
+
+### **Frontend**
+- React.js  
+- React Router  
+- Tailwind CSS  
+- React Icons  
+- Animate.css  
+- React Spring  
+- React Hot Toast  
+- React Toastify  
+
+### **Backend / Environment**
+- Firebase Authentication  
+- Dotenv for environment variable management  
+
+---
+
+## 📦 NPM Packages Used  
+
+| Package | Version | Purpose |
+|----------|----------|----------|
+| `@react-spring/web` | ^10.0.3 | Smooth UI animations |
+| `@tailwindcss/vite` | ^4.1.13 | Tailwind integration with Vite |
+| `@types/dotenv` | ^6.1.1 | TypeScript definitions for dotenv |
+| `animate.css` | ^4.1.1 | Pre-built CSS animations |
+| `dotenv` | ^17.2.3 | Manage environment variables |
+| `firebase` | ^12.4.0 | Authentication and hosting |
+| `react` | ^19.1.1 | Core React library |
+| `react-dom` | ^19.1.1 | React DOM rendering |
+| `react-hot-toast` | ^2.6.0 | Toast notifications |
+| `react-icons` | ^5.5.0 | Icon library |
+| `react-router` | ^7.9.4 | Routing and navigation |
+| `react-toastify` | ^11.0.5 | Notification system |
+| `tailwindcss` | ^4.1.13 | Utility-first CSS framework |
+
+---
+
+## 🚀 Getting Started  
+
+### 1️⃣ Clone the Repository  
+```bash
+git clone https://github.com/yourusername/pet-care.git
+cd pet-care
