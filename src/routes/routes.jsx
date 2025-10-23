@@ -8,6 +8,7 @@ import RegisterPage from "../pages/RegisterPage";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/ErrorPage";
 import ServiceDetailsPage from "../pages/ServiceDetailsPage";
+import WinterCareTips from "../components/WinterCareTips";
 
 
 
@@ -25,7 +26,6 @@ const router = createBrowserRouter([
                 path:"/services-details/:id",
                 element:<PrivateRoute>
                     <ServiceDetailsPage/>
-                 
                 </PrivateRoute>,
                 loader: ()=>fetch('../data.json')
                 
@@ -45,6 +45,10 @@ const router = createBrowserRouter([
             {
                 path:"/*",
                 element:<ErrorPage/>
+            },
+            {
+                path:'/service',
+                element:<WinterCareTips/>
             }
             
         ]

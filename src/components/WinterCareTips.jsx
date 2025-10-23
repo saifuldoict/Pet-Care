@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const WinterCareTips = () => {
   const tips = [
@@ -45,6 +46,7 @@ const WinterCareTips = () => {
           </div>
         ))}
       </div>
+      <Link to="/" className="btn btn-primary mt-5 ">Home</Link>
     </div>
   );
 };

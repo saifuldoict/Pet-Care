@@ -45,7 +45,7 @@ const FooterPage = () => {
               <FaFacebookF className="text-[#1877F2]" /> 
             </a>
             <a
-              href="https://twitter.com"
+              href="https://www.facebook.com/saifulnhk"
               target="_blank"
               rel="noreferrer"
               className="hover:scale-110 transition"
