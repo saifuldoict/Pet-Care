@@ -34,8 +34,8 @@ const Navbar = () => {
     <>
       <nav className="bg-white shadow-md text-gray-800 relative z-50">
         <div className="max-w-[1200px] mx-auto px-4">
-          <div className="flex justify-between items-center h-16">
-         
+          <div className="flex justify-between items-center h-16 navbar">
+              
             <div >
               <Link to={'/'} className="flex items-center gap-2">
                    <img src={paw} alt="Logo" className="h-8 w-8" />
@@ -46,7 +46,7 @@ const Navbar = () => {
             </div>
 
         
-            <div className="hidden md:flex items-center gap-6">
+            <div className="hidden md:flex items-center gap-6 font-bold text-green-600">
               <ul className="flex items-center gap-6">
                 <button onClick={() => handleNavigation("/")} className="link link-hover">
                   Home

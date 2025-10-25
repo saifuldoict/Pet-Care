@@ -1,22 +1,44 @@
 import React from 'react'
-import { Link } from 'react-router';
+import { Link } from 'react-router'
+import "animate.css";
 
-const WinterCareServices = ({service}) => {
-     const {image,serviceName,rating,price,id} = service;
-    
+const WinterCareServices = ({ service, index }) => {
+  const { image, serviceName, rating, price, id } = service;
+
   return (
-    <div className="max-w-sm bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-      <img src={image} alt={serviceName} className="w-full h-48 object-cover" />
+    <div
+      className={`max-w-sm bg-white rounded-lg shadow-md overflow-hidden 
+      transform transition-all duration-500 hover:scale-105 hover:shadow-2xl
+      animate__animated animate__fadeInUp`}
+      style={{
+        animationDelay: `${(index || 0) * 0.3}s`,
+        animationDuration: "1s",
+      }}
+    >
+      <div className="overflow-hidden">
+        <img
+          src={image}
+          alt={serviceName}
+          className="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 animate__animated animate__zoomIn"
+          style={{
+            animationDelay: `${(index || 0) * 0.4}s`,
+            animationDuration: "1s",
+          }}
+        />
+      </div>
+
       <div className="p-4">
         <h3 className="text-lg font-semibold mb-2">{serviceName}</h3>
-        
-        {/* Rating */}
+
+        {/* Rating Section */}
         <div className="flex items-center mb-2">
-          {Array.from({ length: 5 }, (_, index) => (
+          {Array.from({ length: 5 }, (_, starIndex) => (
             <svg
-              key={index}
+              key={starIndex}
               className={`w-4 h-4 mr-1 ${
-                index < Math.round(rating) ? "text-yellow-400" : "text-gray-300"
+                starIndex < Math.round(rating)
+                  ? "text-yellow-400"
+                  : "text-gray-300"
               }`}
               fill="currentColor"
               viewBox="0 0 20 20"
@@ -27,16 +49,18 @@ const WinterCareServices = ({service}) => {
           <span className="text-sm text-gray-600 ml-2">{rating.toFixed(1)}</span>
         </div>
 
-        {/* Price */}
         <p className="text-gray-800 font-medium mb-4">${price}</p>
 
-        {/* View Details Button */}
-        <Link to={`/services-details/${id}`} className="bg-primary text-white px-4 py-2 rounded hover:bg-primary-focus transition">
+        <Link
+          to={`/services-details/${id}`}
+          className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-focus 
+          transition-all duration-300 animate__animated animate__pulse animate__infinite"
+        >
           View Details
         </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default WinterCareServices
+export default WinterCareServices;

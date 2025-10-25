@@ -11,9 +11,9 @@ import {
 const FooterPage = () => {
   return (
     <footer className="bg-base-300 text-base-content mt-10">
-      {/* Footer Grid Section */}
+   
       <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {/* Contact Section */}
+    
         <div className="text-center sm:text-left">
           <h2
             className="text-lg font-semibold mb-4"
@@ -22,17 +22,17 @@ const FooterPage = () => {
             Contact Us
           </h2>
           <p className="flex items-center justify-center sm:justify-start gap-2 mb-2">
-            <FaPhoneAlt className="text-[#7cbc5e]" /> +880 1234-567890
+            <FaPhoneAlt className="text-[#7cbc5e]" /> +880 1745032477
           </p>
           <p className="flex items-center justify-center sm:justify-start gap-2 mb-2">
-            <FaEnvelope className="text-[#7cbc5e]" /> info@petcare.com
+            <FaEnvelope className="text-[#7cbc5e]" /> saifulnhk@gmail.com
           </p>
           <p className="flex items-center justify-center sm:justify-start gap-2">
-            <FaMapMarkerAlt className="text-[#7cbc5e]" /> Dhaka, Bangladesh
+            <FaMapMarkerAlt className="text-[#7cbc5e]" /> Meherpur, Bangladesh
           </p>
         </div>
 
-        {/* Social Media Section */}
+  
         <div className="text-center">
           <h2
             className="text-lg font-semibold mb-4"
@@ -68,7 +68,7 @@ const FooterPage = () => {
           </div>
         </div>
 
-        {/* Policies Section */}
+
         <div className="text-center sm:text-left">
           <h2
             className="text-lg font-semibold mb-4"
@@ -96,7 +96,7 @@ const FooterPage = () => {
         </div>
       </div>
 
-      {/* Bottom Copyright */}
+
       <div className="border-t border-gray-300 py-4 text-center text-sm">
         <p>
           © {new Date().getFullYear()}{" "}

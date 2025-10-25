@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
+import "animate.css";
 
 const WinterCareTips = () => {
   const tips = [
@@ -27,17 +28,21 @@ const WinterCareTips = () => {
       description:
         "Ensure your pet receives a balanced diet and adequate hydration to maintain energy and body warmth in winter.",
     },
-    
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8 ">
-      <h2 className="text-3xl font-bold text-center mb-6">Winter Care Tips for Pets</h2>
+    <div className="max-w-6xl mx-auto px-4 py-8">
+ 
+      <h2 className="text-3xl font-bold text-center mb-6 animate__animated animate__fadeInDown">
+        Winter Care Tips for Pets
+      </h2>
+
+   
       <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-6">
-        {tips.map((tip) => (
+        {tips.map((tip, index) => (
           <div
             key={tip.id}
-            className="card bg-base-100 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 "
+            className={`card bg-base-100 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 animate__animated animate__fadeInUp animate__delay-${index + 1}s hover:scale-[1.02]`}
           >
             <div className="card-body">
               <h3 className="card-title text-xl font-semibold">{tip.title}</h3>
@@ -46,9 +51,18 @@ const WinterCareTips = () => {
           </div>
         ))}
       </div>
-      <Link to="/" className="btn btn-primary mt-5 ">Home</Link>
+
+      <div className="text-center mt-6">
+        <Link
+          to="/"
+          className="btn btn-primary transition-all duration-300 hover:scale-105 animate__animated animate__fadeInUp animate__delay-5s w-full"
+        >
+          Home
+        </Link>
+      </div>
     </div>
   );
 };
 
 export default WinterCareTips;
+

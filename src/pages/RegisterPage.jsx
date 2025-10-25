@@ -20,7 +20,7 @@ const RegisterPage = () => {
     const photoURL = e.target.photo.value.trim();
     const password = e.target.password.value.trim();
 
-    // Password validation
+
     if (password.length < 6) return setError("Password must be at least 6 characters.");
     if (!/[A-Z]/.test(password)) return setError("Password must have an uppercase letter.");
     if (!/[a-z]/.test(password)) return setError("Password must have a lowercase letter.");

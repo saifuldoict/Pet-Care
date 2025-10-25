@@ -8,7 +8,7 @@ const PrivateRoute = ({ children }) => {
   
 
   if (user && user?.email) {
-    toast.success("✅ Welcome back! You are logged in.");
+    toast.success(" Welcome back! You are logged in.");
     return children;
   } else {
     return <Navigate to="/login"/>;

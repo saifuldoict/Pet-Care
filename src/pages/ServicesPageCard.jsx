@@ -51,13 +51,15 @@ const animation = useSpring({
     
       <div className="space-y-5 shadow-2xl p-4 border border-gray-50 rounded-xl hover:shadow-3xl transition-all duration-300">
   
+  {service && (
   <div className="w-full h-52 sm:h-60 md:h-64 overflow-hidden rounded-lg mx-auto">
-  <img
-    src={service.image}
-    alt={service.serviceName}
-    className="w-full h-full object-cover object-center"
-  />
-</div>
+    <img
+      src={service.image}
+      className="w-full h-full object-cover object-center"
+    />
+  </div>
+)}
+
 
 
   <div className="text-center">
@@ -68,10 +70,10 @@ const animation = useSpring({
 
     <div className="flex justify-around items-center mb-3 text-sm md:text-base">
       <p className="font-bold text-gray-700">
-        ⭐ Rating: <span className="text-yellow-600">{service.rating}</span>
+         Rating: <span className="text-yellow-600">{service.rating}</span>
       </p>
       <p className="text-red-600 font-bold">
-        💰 Price: {service.price}
+         Price: {service.price}
       </p>
     </div>
   </div>

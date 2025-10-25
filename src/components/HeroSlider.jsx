@@ -39,7 +39,7 @@ const HeroSlider = () => {
   const slideInterval = useRef(null);
   const progressInterval = useRef(null);
 
-  // Slide transition animation
+
   const slideAnimation = useSpring({
     opacity: 1,
     transform: "translateX(0%)",
@@ -48,7 +48,7 @@ const HeroSlider = () => {
     reset: true,
   });
 
-  // Automatic slide rotation
+
   useEffect(() => {
     if (!paused) {
       slideInterval.current = setInterval(() => {
@@ -66,7 +66,7 @@ const HeroSlider = () => {
     };
   }, [paused]);
 
-  // Swipe gesture handlers
+
   const touchStart = useRef(0);
   const handleTouchStart = (e) => (touchStart.current = e.touches[0].clientX);
   const handleTouchEnd = (e) => {
@@ -96,7 +96,7 @@ const HeroSlider = () => {
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          {/* Image */}
+  
           <div className="w-full md:w-1/2 h-full">
             <img
               src={slide.image}
@@ -105,7 +105,7 @@ const HeroSlider = () => {
             />
           </div>
 
-          {/* Text Content */}
+     
           <div className="w-full md:w-1/2 p-10 flex flex-col justify-center bg-gradient-to-br from-[#fefefe] to-[#f7f3f3] text-gray-800">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 text-[#403f3f]">
               {slide.title}
@@ -120,7 +120,7 @@ const HeroSlider = () => {
         </animated.div>
       ))}
 
-      {/* Controls */}
+     
       <div className="absolute flex justify-between transform -translate-y-1/2 left-3 right-3 top-1/2">
         <button
           onClick={prevSlide}
@@ -136,7 +136,7 @@ const HeroSlider = () => {
         </button>
       </div>
 
-      {/* Dots */}
+   
       <div className="absolute bottom-8 flex justify-center w-full gap-3">
         {slides.map((_, i) => (
           <button
@@ -149,7 +149,7 @@ const HeroSlider = () => {
         ))}
       </div>
 
-      {/* Progress bar */}
+
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-300">
         <div
           className="h-1 bg-[#d72050] transition-all duration-150 ease-linear"
